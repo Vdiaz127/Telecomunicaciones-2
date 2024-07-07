@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InfoCard from '../components/InfoCard.astro';
+---
+
+<Layout title="Fundamentos de la Modulación Digital">
+  <main>
+    <h1>Comunicacion digital</h1>
+    <p>Un sistema de comunicaciones digital es un sistema en el cuál la
+      energía electromagnética se transmite y recibe en forma digital (niveles discretos tal
+      como +5v y tierra). Los sistemas binarios utilizan señales digitales que solo tienen dos
+      niveles discretos (bi significa dos).</p>
+
+    <InfoCard title="Características de las Modulaciones Digitales">
+      <p>La modulación digital es un proceso en el que la información digital se transmite mediante la modificación de uno o varios parámetros de una señal portadora analógica.</p>
+      <ul>
+        <li>Resistencia a la Interferencia: Las modulaciones digitales son más resistentes a la interferencia que las modulaciones analógicas.</li>
+        <li>Eficiencia en el Ancho de Banda: Son más eficientes en el uso del ancho de banda, permitiendo transmitir información con menos potencia.</li>
+        <li>Sencillez de Implementación: La información digital se puede representar fácilmente en forma de pulsos, lo que simplifica la implementación.</li>
+      </ul>
+    </InfoCard>
+    <InfoCard title="Tipos de Modulaciones Digitales">
+      <InfoCard title="Modulación por Desplazamiento de Fase (PSK)">
+        <p>En PSK, la fase de la onda portadora se modifica para representar los bits.</p>
+        <p>Ejemplos comunes incluyen:</p>
+        <ul>
+          <li>BPSK (Binary PSK): Utiliza dos fases para representar 0 y 1.</li>
+          <li>QPSK (Quadrature PSK): Utiliza cuatro fases para representar combinaciones de bits.</li>
+        </ul>
+        <p>Aplicaciones: Comunicaciones satelitales, sistemas GPS y algunos sistemas de telefonía móvil.</p>
+        <figure>
+          <img src="media/BPSK.gif" alt="Modulación BPSK">
+        </figure>
+      </InfoCard>
+      <InfoCard title="Modulación por Desplazamiento de Frecuencia (FSK)">
+        <p>En FSK, se modula la frecuencia de la onda portadora para representar los bits.</p>
+        <p>Ejemplos:</p>
+        <ul>
+          <li>2-FSK: Utiliza dos frecuencias para representar 0 y 1.</li>
+        </ul>
+        <p>Aplicaciones: Walkie-talkies y algunos sistemas de comunicación por satélite.</p>
+        <figure>
+          <img src="media/modulacion-FSK.gif" alt="Modulación FSK">
+        </figure>
+      </InfoCard>
+      <InfoCard title="Modulación por Desplazamiento de Amplitud (ASK)">
+        <p>En ASK, se modula la amplitud de la onda portadora para representar los bits.</p>
+        <p>Aplicaciones: Sistemas de control remoto y sistemas RFID.</p>
+        <img src="media/modulacion-ASK.gif" alt="ASK">
+      </InfoCard>
+      <InfoCard title="Modulación de Amplitud en Cuadratura (QAM)">
+        <p>En QAM, se modulan simultáneamente la amplitud y la fase de la onda portadora para representar múltiples bits por símbolo.</p>
+        <p>Aplicaciones: Televisión por cable y comunicaciones por cablemódem.</p>
+        <p>Variantes de la Modulación QAM:</p>
+        <ul>
+          <li>16-QAM, 64-QAM, 256-QAM, 1024-QAM, 2048-QAM.</li>
+        </ul>
+        <img src="media/16QAM_Gray_Coded.svg.png" alt="Constelación 16-QAM">
+      </InfoCard>
+    </InfoCard>
+    <InfoCard title="Ejemplos Prácticos de Modulación Digital">
+      <ul>
+        <li>Transmisión de Datos por Cable: Ethernet utiliza modulaciones digitales para transmitir datos a alta velocidad.</li>
+        <img src="media/ethernet.png" alt="Cable Ethernet">
+        <li>Transmisión de Datos por Radio: Wi-Fi emplea modulaciones digitales como QAM para transmitir datos de manera eficiente.</li>
+        <img src="media/wifi.png" alt="wifi">
+        <li>Transmisión de Datos por Fibra Óptica: Internet de Alta Velocidad utiliza modulaciones digitales para ofrecer conexiones rápidas y fiables.</li>
+        <img src="media/fibra.gif" alt="Fibra Optica">
+        <li>Sistemas de Control: Controladores Industriales utilizan modulaciones digitales para transmitir señales de control de manera precisa y fiable.</li>
+        <img src="media/modulador-digita.jpg" alt="Control">
+      </ul>
+    </InfoCard>
+	<div style="text-align: center; margin-top: 2rem;">
+		<a href="/" class="button">Comunicaciones Analógicas</a>
+		<a href="/c_digital" class="button">Comunicaciones Digitales</a>
+		<a href="/fourier" class="button">Serie de Fourier</a>
+	  </div>
+  </main>
+</Layout>
+
+<style>
+	.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  main {
+    margin: auto;
+    padding: 2rem;
+    width: 800px;
+    max-width: calc(100% - 4rem);
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  h1, h2 {
+    color: #222;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+  figure {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

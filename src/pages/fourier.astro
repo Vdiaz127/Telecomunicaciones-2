@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InfoCard from '../components/InfoCard.astro';
+---
+
+<Layout title="Series y Transformada de Fourier">
+  <main>
+    <InfoCard title="Series de Fourier">
+      <p>Las series de Fourier son una herramienta matemática fundamental utilizada para analizar funciones periódicas. A través de las series de Fourier, una función periódica se descompone en una suma infinita de funciones seno y coseno. La forma general de una serie de Fourier para una función  f(x) en el intervalo  -L < x < L  es:</p>
+      <img src="media/f1.jpg">
+      <p>Los coeficientes  a<sub>0</sub>, a<sub>n</sub> y b<sub>n</sub> se calculan de la siguiente manera:</p>
+      <img src="media/f2.jpg">
+      <p>La serie de Fourier converge a la función original  f(x) bajo ciertas condiciones, como la diferenciabilidad a trozos de f(x)  en el intervalo considerado.</p>
+    </InfoCard>
+    <InfoCard title="Series de Fourier de Funciones Impares y Pares">
+      <p>Para funciones impares:</p>
+      <img src="media/f3.jpg">
+      <p>donde</p>
+      <img src="media/f4.jpg">
+      <p>Para funciones pares:</p>
+      <img src="media/f5.jpg">
+      <p>donde</p>
+      <img src="media/f6.jpg">
+    </InfoCard>
+    <InfoCard title="Forma Compleja de las Series de Fourier">
+      <p>Utilizando las fórmulas de Euler, se puede expresar la serie de Fourier en términos de exponenciales complejas:</p>
+      <img src="media/f7.jpg">
+      <p>donde</p>
+      <img src="media/f8.jpg">
+    </InfoCard>
+    <InfoCard title="Transformada de Fourier">
+      <p>La transformada de Fourier extiende el concepto de series de Fourier a funciones no periódicas, permitiendo representar cualquier función en términos de una integral de senos y cosenos. La transformada de Fourier de una función \( f(x) \) se define como:</p>
+      <img src="media/f9.jpg">
+      <p>La transformada inversa de Fourier se utiliza para reconstruir la función original a partir de su transformada:</p>
+      <img src="media/f10.jpg">
+    </InfoCard>
+    <InfoCard title="Aplicaciones en Telecomunicaciones">
+      <ul>
+        <li>Modulación y Demodulación: La transformada de Fourier se utiliza para analizar y diseñar técnicas de modulación y demodulación, como la modulación por amplitud (AM) y la modulación por frecuencia (FM).</li>
+        <li>Análisis de Espectro: La transformada de Fourier permite determinar el espectro de frecuencias de una señal, identificando sus componentes frecuenciales y su amplitud.</li>
+        <li>Filtrado de Señales: Se emplea en el diseño de filtros digitales y analógicos, permitiendo eliminar ruido y mejorar la calidad de la señal.</li>
+        <li>Compresión de Datos: Técnicas como la Transformada Discreta de Fourier (DFT) se utilizan en la compresión de datos, reduciendo el tamaño de los archivos de audio y video sin pérdida significativa de calidad.</li>
+      </ul>
+      <p>La teoría de Fourier proporciona una base matemática sólida para el procesamiento y análisis de señales, siendo fundamental en el desarrollo de tecnologías de telecomunicaciones modernas.</p>
+    </InfoCard>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="/" class="button">Comunicaciones Analógicas</a>
+        <a href="/c_digital" class="button">Comunicaciones Digitales</a>
+        <a href="/fourier" class="button">Serie de Fourier</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+    .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  main {
+    margin: auto;
+    padding: 2rem;
+    width: 800px;
+    max-width: calc(100% - 4rem);
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  h1, h2 {
+    color: #222;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p, pre {
+    margin-bottom: 1rem;
+  }
+  pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
